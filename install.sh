@@ -14,4 +14,4 @@ mkdir -p $HOME/.julia/require
 cp src/require.jl $HOME/.julia/require
 cp src/reloadable.jl $HOME/.julia/require
 echo "Installing juliareq into /usr/bin"
-install -t /usr/bin -m 755 src/juliareq
+install -t /usr/local/bin -m 755 src/juliareq

@@ -7,9 +7,9 @@ Macros to make loading (and reloading) files in Julia easier. Instead of loading
 @require "ml/cv", "nlopt"
 ```
 
-This will first look for the file `./ml/cv.jl` and if the file is not found for `./ml/cv/cv.jl` then `./nlopt.jl` is loaded (and `./nlopt/nlopt.jl` respectively). This allows convenient growth of modules, as they can be simply put into a subdirectory when additional compartmentalization is needed without the need to change all the includes. The search path is currently hard-coded as the current working directory and`~/.julia` (where the `require.jl` will be installed.
+This will first look for the file `./ml/cv.jl` and if the file is not found for `./ml/cv/cv.jl`, then `./nlopt.jl` is loaded (and `./nlopt/nlopt.jl` respectively if it is not found). This allows convenient growth of modules, as they can be simply put into a subdirectory when additional compartmentalization is needed without the need to change all the includes. The search path is currently hard-coded as the current working directory and`~/.julia` (where the `require.jl` will be installed).
 
-The module also supports automatic reloading of all changed file. This is quite handy when working with the interactive shell, simply type
+The module also supports automatic reloading of all changed files. This is quite handy when working with the interactive shell, simply type
 
 ```julia
 julia> @reload
