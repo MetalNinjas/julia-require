@@ -1,0 +1,6 @@
+#!/bin/sh
+# File: juliareq
+# Author: Malte Harder
+# Julia alias to autoload require
+HOME=~;
+julia -P "load(\"$HOME/.julia/require/require.jl\")" $@
